@@ -1,3 +1,5 @@
+@import url("animations.css");
+
 html,body
 {
     margin: 0px;
@@ -7,6 +9,14 @@ html,body
     height: 100%;
 
 }
+
+:root {
+    --main-animation-delay1: 1s;
+    --main-animation-timing1: 0.5s;
+    --main-animation-delay2: 3.5s;
+    --main-animation-timing2: 0.9s;
+}
+
 
 @font-face
 {
@@ -20,23 +30,25 @@ html,body
     top : 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width : 700px;
-    height: 700px;
+    width : 600px;
+    height: 600px;
     background: transparent;
     border-radius: 50%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 
 .left-google{
     position: absolute;
     width: 30%;
-    left: -1%;
+    left: 0%;
     top: 50%;
     height: 30%;
     background: #f0b500;
     transform: translateY(-50%);
     z-index: 100;
+    animation: goToCircle1 var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) 1 forwards, goToCircle1a var(--main-animation-timing2) ease-in-out var(--main-animation-delay2) 1 forwards;
+
 }
 
 .left-google::before{
@@ -48,6 +60,7 @@ html,body
     right: 0px;
     transform-origin: top right;
     transform: rotate(45deg);
+    animation: goToCircle1a var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 .left-google::after{
@@ -59,6 +72,7 @@ html,body
     right: 0px;
     transform-origin: bottom right;
     transform: rotate(-45deg);
+    animation: goToCircle1a var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 
@@ -71,6 +85,7 @@ html,body
     background: #2fa24d;
     transform: translateX(-50%);
     z-index: 200;
+    animation: goToCircle2 var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 
@@ -83,6 +98,7 @@ html,body
     right: 0px;
     transform-origin: top left;
     transform: rotate(45deg);
+    animation: goToCircle2a var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 .bottom-google::after{
@@ -94,6 +110,7 @@ html,body
     right: 0px;
     transform-origin: top right;
     transform: rotate(-45deg);
+    animation: goToCircle2a var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards
 }
 
 
@@ -101,12 +118,13 @@ html,body
 .right-google{
     position: absolute;
     width: 30%;
-    right: -1%;
+    right: 0%;
     top: 50%;
     height: 30%;
     background: #3b7ded;
     transform: translateY(-50%);
     z-index: 300;
+    animation: goToCircle3 var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 .right-google::before{
@@ -118,6 +136,7 @@ html,body
     right: 0px;
     transform-origin: top left;
     transform: rotate(-45deg);
+    animation: goToCircle3a var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 .right-google::after{
@@ -129,6 +148,7 @@ html,body
     right: 0px;
     transform-origin: bottom left;
     transform: rotate(45deg);
+    animation: goToCircle3a var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 
@@ -143,6 +163,7 @@ html,body
     background: #e43e2a;
     transform: translateX(-50%);
     z-index: 400;
+    animation: goToCircle4 var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 
@@ -155,6 +176,7 @@ html,body
     right: 0px;
     transform-origin: bottom left;
     transform: rotate(-45deg);
+    animation: goToCircle4a var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 .top-google::after{
@@ -166,6 +188,7 @@ html,body
     right: 0px;
     transform-origin: bottom right;
     transform: rotate(45deg);
+    animation: goToCircle4a var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 .overlay{
@@ -178,6 +201,7 @@ html,body
     background: #FFF;
     z-index: 600;
     border-radius: 50%;
+    animation: hideAfterLogo var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 .blue-handle{
@@ -189,6 +213,7 @@ html,body
     z-index: 700;
     background: #3b7ded;
     height: 19%;
+    animation: hideAfterLogo var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 /* .blue-handle::after{
