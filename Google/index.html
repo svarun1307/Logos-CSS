@@ -21,10 +21,17 @@
             <div class="bottom-google"></div>
             <div class="right-google"></div>
             <div class="top-google"></div>
-
             <div class="overlay"></div>
             <div class="blue-handle"></div>
-
         </div>
     </body>
+    <script type="text/javascript">
+        setInterval(function(){
+            document.querySelector(".outerContainer").innerHTML = "";
+            setTimeout(function(){
+                document.querySelector(".outerContainer").innerHTML = '<div class="left-google"></div><div class="bottom-google"></div><div class="right-google"></div><div class="top-google"></div><div class="overlay"></div><div class="blue-handle"></div>';
+            },1100);
+            
+        },7000);
+    </script>
 </html>

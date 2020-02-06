@@ -14,7 +14,7 @@ html,body
     --main-animation-delay1: 1s;
     --main-animation-timing1: 0.5s;
     --main-animation-delay2: 3.5s;
-    --main-animation-timing2: 0.9s;
+    --main-animation-timing2: 0.8s;
 }
 
 
@@ -34,7 +34,7 @@ html,body
     height: 600px;
     background: transparent;
     border-radius: 50%;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 
@@ -47,6 +47,7 @@ html,body
     background: #f0b500;
     transform: translateY(-50%);
     z-index: 100;
+    
     animation: goToCircle1 var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) 1 forwards, goToCircle1a var(--main-animation-timing2) ease-in-out var(--main-animation-delay2) 1 forwards;
 
 }
@@ -60,7 +61,8 @@ html,body
     right: 0px;
     transform-origin: top right;
     transform: rotate(45deg);
-    animation: goToCircle1a var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
+    
+    animation: goToCircle1b var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 .left-google::after{
@@ -72,7 +74,7 @@ html,body
     right: 0px;
     transform-origin: bottom right;
     transform: rotate(-45deg);
-    animation: goToCircle1a var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
+    animation: goToCircle1b var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 
@@ -85,7 +87,7 @@ html,body
     background: #2fa24d;
     transform: translateX(-50%);
     z-index: 200;
-    animation: goToCircle2 var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
+    animation:  goToCircle2 var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) 1 forwards, goToCircle2a var(--main-animation-timing2) ease-in-out var(--main-animation-delay2) 1 forwards;
 }
 
 
@@ -98,7 +100,7 @@ html,body
     right: 0px;
     transform-origin: top left;
     transform: rotate(45deg);
-    animation: goToCircle2a var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
+    animation: goToCircle2b var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 .bottom-google::after{
@@ -110,7 +112,7 @@ html,body
     right: 0px;
     transform-origin: top right;
     transform: rotate(-45deg);
-    animation: goToCircle2a var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards
+    animation: goToCircle2b var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards
 }
 
 
@@ -124,7 +126,7 @@ html,body
     background: #3b7ded;
     transform: translateY(-50%);
     z-index: 300;
-    animation: goToCircle3 var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
+    animation: goToCircle3 var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) 1 forwards, goToCircle3a var(--main-animation-timing2) ease-in-out var(--main-animation-delay2) 1 forwards;
 }
 
 .right-google::before{
@@ -136,7 +138,7 @@ html,body
     right: 0px;
     transform-origin: top left;
     transform: rotate(-45deg);
-    animation: goToCircle3a var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
+    animation: goToCircle3b var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 .right-google::after{
@@ -148,7 +150,7 @@ html,body
     right: 0px;
     transform-origin: bottom left;
     transform: rotate(45deg);
-    animation: goToCircle3a var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
+    animation: goToCircle3b var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 
@@ -163,7 +165,7 @@ html,body
     background: #e43e2a;
     transform: translateX(-50%);
     z-index: 400;
-    animation: goToCircle4 var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
+    animation: goToCircle4 var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) 1 forwards, goToCircle4a var(--main-animation-timing2) ease-in-out var(--main-animation-delay2) 1 forwards;
 }
 
 
@@ -176,7 +178,7 @@ html,body
     right: 0px;
     transform-origin: bottom left;
     transform: rotate(-45deg);
-    animation: goToCircle4a var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
+    animation: goToCircle4b var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 .top-google::after{
@@ -188,7 +190,7 @@ html,body
     right: 0px;
     transform-origin: bottom right;
     transform: rotate(45deg);
-    animation: goToCircle4a var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
+    animation: goToCircle4b var(--main-animation-timing1) ease-in-out var(--main-animation-delay1) forwards;
 }
 
 .overlay{
